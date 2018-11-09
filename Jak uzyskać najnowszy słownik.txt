@@ -1,0 +1,59 @@
+Najpierw w bashu:
+  
+for ((i=1;i<3067;i++)) ; do
+	lynx --dump "https://sjp.pl/slownik/lp.phtml?f_vl=2&page=$i"
+
+done > file.txt
+
+
+Nastêpnie w Visual Studio:
+
+ThreadPool.QueueUserWorkItem(GenerateDictionary, "pack://application:,,,/DictionaryRaw.txt");
+private void GenerateDictionary(object path)
+{
+  var uri = new Uri(path.ToString());
+  var resourceStream = Application.GetResourceStream(uri);
+  StreamWriter writetext = new StreamWriter("MyDictionary.txt");
+  using (StreamReader sr = new StreamReader(resourceStream.Stream))
+  { 
+    while (sr.Peek() >= 0)
+    {
+      string line = sr.ReadLine();
+      foreach (string word in line.Split())
+      {
+      if (word.Length >= 2 && word[0] == '[' && Char.IsDigit(word[1]))
+        {
+          string actual_word = word.Split(']')[1];
+          if (Char.IsLetter(actual_word[0]))
+          {
+            actual_word = actual_word.ToUpper();
+            if (
+              actual_word.Length >= 3 &&
+              actual_word.Length <= 16 &&
+              !actual_word.Contains('Q') &&
+              !actual_word.Contains('V') &&
+              !actual_word.Contains('X') &&
+              actual_word != "NASTÊPNE" &&
+              actual_word != "SJP" &&
+              actual_word != "S£OWNIK" &&
+              actual_word != "S£OWA" &&
+              actual_word != "KOMENTARZE" &&
+              actual_word != "WIÊCEJ" &&
+              actual_word != "HAS£O" &&
+              actual_word != "AKTUALIZACJA"
+            )
+            {
+              writetext.WriteLine(actual_word);
+            }
+          }
+        }
+      }
+    }
+  }
+  writetext.Flush();
+}
+
+A potem kilka innych usprawnieñ, takich jak:
+  usuniêcie powtórzeñ (has³o powtarza siê kilkukrotnie, jeœli ma ró¿ne znaczenia)
+  usuniêcie s³ów krótszych ni¿ 3 i d³u¿szych ni¿ 16
+  usuniêcie s³ów zawieraj¹cych 'q', 'v', 'x' albo '-'

@@ -1,0 +1,1 @@
+﻿# Słowoszust - Wyszukiwarka wyrazów do gry w Słowotok

@@ -1,0 +1,31 @@
+﻿<Window x:Class="Slowoszust.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Slowoszust"
+        mc:Ignorable="d"
+        Title="Słowoszust" Height="650" Width="450" MaxWidth="450" Background="#250931">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0">
+            <Label.Background>
+                <ImageBrush ImageSource="Logo_transparent.png" Stretch="Uniform" />
+            </Label.Background>
+        </Label>
+
+        <Label Name="Description" Grid.Row="1" Style="{StaticResource LabelStyle}">Skopiuj lub przepisz planszę i graj!</Label>
+        <Grid Name="MainGrid" Height="Auto" Width="213" Margin="0,50,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button Name="PlayButton" Grid.Row="2" Style="{StaticResource ButtonStyle}" Content="Graj!" Click="BeginPlay" Margin="0,50,0,0"/>
+        <ToggleButton Name = "ToggleTopmost" Grid.Row="2" Style="{StaticResource ToggleButtonStyle}" Checked="TopmostOff" Unchecked="TopmostOn">
+            <TextBlock TextAlignment="Center">Zawsze<LineBreak/>na wierzchu</TextBlock>
+        </ToggleButton>
+    </Grid>
+
+</Window>

@@ -1,0 +1,15 @@
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\MainWindow.g.cs
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\App.g.cs
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\App.baml
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\MainWindow.baml
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Slowoszust.Properties.Resources.resources
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Slowoszust.csproj.GenerateResource.Cache
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\bin\Release\Słowoszust.exe.config
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\bin\Release\Słowoszust.exe
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\bin\Release\Słowoszust.pdb
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Słowoszust_MarkupCompile.cache
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Słowoszust_MarkupCompile.lref
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Słowoszust.g.resources
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Słowoszust.exe
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Słowoszust.pdb
+e:\documents\visual studio 2017\Projects\Slowoszust\Slowoszust\obj\Release\Slowoszust.csprojResolveAssemblyReference.cache
